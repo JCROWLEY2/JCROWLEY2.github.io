@@ -1,28 +1,60 @@
-<!-- # JCROWLEY2.github.io
+<!DOCTYPE html>
+  <html>
+    <head>
+	
+      <!-- # JCROWLEY2.github.io
 Diving Project Website for SCKANS CSCI434
 
 Student: Joshua Crowley
 Last Updated: 5 Oct
 Description: This will be a website in which is built per the instructions of the textbook and the Course. I plan to build upon the idea centered around Scuba Diving and my love for it. I would like to add a photo gallery that has a ton of great photos that my wife and I have taken as we dive around Guam. I would like to add a scrolling slide show at the main page of my website, then have a separate link at the top or interactive menu with different options as we progress through the course.
--->
 
-<!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
+Changes 11 Oct 21: Added some style and fixed HTML tag at the top. In line with the exercise 7.3, I attempted to change how my viewport works for images. No impact to layout in code. I would like to change the images to use a JS script in the coming weeks.
+-->
+	  
+	  <meta charset="utf-8">
       <title>Crowley Under Water</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <style>
+body {
+  background-color: #00aaff;
+  margin: 0 12%;
+  font-family: sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1em;
+}
+img {
+	max-width: 100%;
+}
+</style>
+
+	  
     </head>
     <body>
       
       <h1>Diving in Guam</h1>
       
     <p>This is a Marble Ray
-	<img src="Images/Marble-Ray-400.jpg" alt="Largest and first Marble Ray I have seen upclose"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Marble-Ray-400.jpg 400w,
+	<picture>
+	<!--Attempting to change the format of responsive images on 11 Oct 21, no changes -->
+	<source media="(min-width: 480px)"
+	srcset="Images/Marble-Ray-400.jpg 400w,
 			Images/Marble-Ray-800.jpg 800w,
 			Images/Marble-Ray-1200.jpg 1200w,
-			Images/Marble-Ray-2048.jpg 2048w">
+			Images/Marble-Ray-2048.jpg 2048w sizes="80vw">
+	<img src="Images/Marble-Ray-400.jpg" alt="Largest and first Marble Ray I have seen upclose">
 			<br>This was captured at the dive site Barracuda Rock in Guam.</p>
      
     <h2>The Beginning</h2>
