@@ -6,43 +6,28 @@
 Diving Project Website for SCKANS CSCI434
 
 Student: Joshua Crowley
-Last Updated: 5 Oct
+Last Updated: 21 Oct
 Description: This will be a website in which is built per the instructions of the textbook and the Course. I plan to build upon the idea centered around Scuba Diving and my love for it. I would like to add a photo gallery that has a ton of great photos that my wife and I have taken as we dive around Guam. I would like to add a scrolling slide show at the main page of my website, then have a separate link at the top or interactive menu with different options as we progress through the course.
 
 Changes 11 Oct 21: Added some style and fixed HTML tag at the top. In line with the exercise 7.3, I attempted to change how my viewport works for images. No impact to layout in code. I would like to change the images to use a JS script in the coming weeks.
+
+Changes 21 Oct 21: Moved the CSS to a seperate file. I failed at starting
+a new page, but got it figured out for a really basic page that has
+embeded video and all other requirements for week 4, hopefully..
 -->
 	  
 	  <meta charset="utf-8">
       <title>Crowley Under Water</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <style>
-body {
-  background-color: #00aaff;
-  margin: 0 12%;
-  font-family: sans-serif;
-  }
-
-h1 {
-  text-align: center;
-  font-family: serif;
-  font-weight: normal;
-  text-transform: uppercase;
-  border-bottom: 1px solid #57b1dc;
-  margin-top: 30px;
-}
-
-h2 {
-  color: #fff;
-  font-size: 1em;
-}
-img {
-	max-width: 100%;
-}
-</style>
-
-	  
+	 <link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
+	<div style="position:fixed; top:0; right:0;">
+<ul id="menu">
+<li><a href="predivecheck.html">Pre-Dive Check</a></li>
+<li><a href="#">Camera Equpment</a></li>
+</ul>
+</div>
       
       <h1>Diving in Guam</h1>
       
@@ -124,8 +109,8 @@ img {
 			This is a type of shrimp commonly found at night around coral. I have many pictures of these guys as the only way to see them was with your flash light and they don't move much when taking pictures of them.</p>			
    
          <footer>
-      Crowley Under Water &copy; 2021 English (US) <span> <a href="#">About</a> <a href="#">Dive Gear</a>
-          <a href="#">Camera Equipment</a> <a href="#">Contact Me</a> </span>
+      Crowley Under Water &copy; 2021 English (US) <span> <a href="#">About</a> <a href="diveGear.html">Dive Gear</a>
+          <a href="#">Camera Equipment</a> <a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
    </footer>
     </body>
   </html>
