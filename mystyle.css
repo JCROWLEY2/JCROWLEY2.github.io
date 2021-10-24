@@ -2,60 +2,268 @@
 Diving Project Website for SCKANS CSCI434
 
 Student: Joshua Crowley
-Last Updated: 21 Oct
-Description: This was a quick attempt to move my CSS to a seperate file.
+Last Updated: 24 Oct
+Description: 
+24 Oct 21: I was able to find a ton of helpful references that allowed
+me to create a more uniform layout that I had invisioned. Some sections
+of CSS was cut an pasted from online with edits. Comments will be added
+to show where they came from.
+
+21 Oct 21: This was a quick attempt to move my CSS to a seperate file.
 This will not be my final theme and layout as I have a better layout in mind.
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #00aaff;
-  margin: 0 12%;
-  font-family: sans-serif;
-  }
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
 
 h1 {
-  text-align: center;
-  font-family: serif;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  border-bottom: 1px solid #57b1dc;
-  margin-top: 30px;
+  font-size: 50px;
+  word-break: break-all;
 }
 
 h2 {
-  color: #fff;
-  font-size: 1em;
+  font-size: 30px;
+  word-break: break-all;
+  text-align: center;
 }
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Adding borders to my photos */
 img {
-	max-width: 100%;
-}
-menu {
-margin:0;
-list-style: none;
-width: 140px;
-text-align: center;
+border: 5px solid #8F8F8F;
 }
 
-menu li {
-font: 90% "Arial", Arial, Helvetica, sans-serif;
-margin: 0;
-padding: 0;
+/* Thank you to CSS-Tricks for the CSS code to make
+the youtube video responsive https://css-tricks.com/fluid-width-video/ */
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-menu a {
-background: #222; /*Standard Color*/
-border-bottom: 1px solid #000000;
-color: #ccc;
-display: block;
-margin: 0;
-padding: 20px 12px;
-text-decoration: none;
+/* Everything from this point down was taken from this CSS sheet from 
+learnlayout.com (https://learnlayout.com/css/style.css)
+*/
+a:link {
+  color: #D64078;
+  text-decoration: none;
 }
 
-menu a:hover {
-background: #004400; /*Hovered Color*/
-color: #fff;
-text-shadow:#ffffff 0px 0px 5px; /*Text Glow*/
-padding-bottom: 20px;
+a:visited {
+  color: #D64078;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: black;
+  color: white;
+}
+
+#menu {
+  background-color: whiteSmoke;
+  text-align: center;
+}
+
+#menu a {
+  color: #8F8F8F;
+  display: inline-block;
+  padding: .5em 1em;
+  text-shadow: 0 1px 0 #EDEDED;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background: rgb(220, 220, 220);
+}
+
+#menu .home-link {
+  margin-right: 1em;
+}
+
+#logo {
+  text-align: center;
+  background-color: #ededed;
+  padding: 1em 0;
+}
+
+#logo a {
+  text-decoration: none;
+  color: #414142;
+  position: relative;
+}
+
+#logo a:active {
+  background: none;
+}
+
+/* Overidding the border addition above */
+#logo img {
+	vertical-align: middle;
+    max-width: 120px;
+	border: none;
+}
+
+#logo span {
+  vertical-align: middle;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  margin-left: .2em;
+}
+
+@media screen and (min-width:601px) {
+
+  #menu {
+    position: absolute;
+    top: -16px;
+    left: -20px;
+    width: 250px;
+    padding-top: 2em;
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+         -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-35deg) translate(-92px, 22px);  /* Safari 3.1+, Chrome */
+       -moz-transform: rotate(-35deg) translate(-92px, 22px);  /* Firefox 3.5-15 */
+        -ms-transform: rotate(-35deg) translate(-92px, 22px);  /* IE9+ */
+         -o-transform: rotate(-35deg) translate(-92px, 22px);  /* Opera 10.5-12.00 */
+            transform: rotate(-35deg) translate(-92px, 22px);  /* Firefox 16+, Opera 12.50+ */
+  }
+
+  .rtl #menu {
+    position: absolute;
+    top: -16px;
+    left: auto;
+    right: -20px;
+    width: 250px;
+    padding-top: 2em;
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+         -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(35deg) translate(62px, -129px);  /* Safari 3.1+, Chrome */
+       -moz-transform: rotate(35deg) translate(62px, -129px);  /* Firefox 3.5-15 */
+        -ms-transform: rotate(35deg) translate(62px, -129px);  /* IE9+ */
+         -o-transform: rotate(35deg) translate(62px, -129px);  /* Opera 10.5-12.00 */
+            transform: rotate(35deg) translate(62px, -129px);  /* Firefox 16+, Opera 12.50+ */
+  }
+
+  #menu a {
+    display: block;
+    padding: .2em 0;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+
+  #logo img {
+    width: 15%;
+  }
+
+}
+
+@media screen and (max-width:404px) {
+
+  a.nav {
+    width: 40%;
+  }
+
+  h1, #logo span {
+    font-size: 1.5em;
+  }
+
+}
+
+/* Edited by me based on the logo span and style */
+#footer {
+  text-align: center;
+  background-color: #ededed;
+  padding: 1em 0;
+}
+
+#footer a {
+  color: #8F8F8F;
+  display: inline-block;
+  padding: .5em 1em;
+  text-shadow: 0 1px 0 #EDEDED;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  background: rgb(220, 220, 220);
+}
+
+#footer span {
+  vertical-align: middle;
+  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+  margin-left: .2em;
 }

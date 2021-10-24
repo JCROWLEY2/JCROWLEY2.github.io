@@ -6,12 +6,14 @@
 Diving Project Website for SCKANS CSCI434
 
 Student: Joshua Crowley
-Last Updated: 21 Oct
-Description: This is a barebones setup of a new page that I will list all
-my dive equipment that I have. I need to understand and find a better way
-to share my header/nav bar/footer across all HTML pages. Two classes at the 
-same time is robbing me of my experience to really enjoy and write html
-for this course.
+Last Updated: 24 Oct
+Description: 
+
+24 Oct 21: Copy and Pasted Header/Menu/Footer to this page
+that is a work in progress. I will add links and layout
+to show all my gear.
+
+21 Oct 21: This is a barebones setup of a new page that I will list all my dive equipment that I have. I need to understand and find a better way to share my header/nav bar/footer across all HTML pages. Two classes at the same time is robbing me of my experience to really enjoy and write html for this course.
 -->
 	  
 	  <meta charset="utf-8">
@@ -20,22 +22,27 @@ for this course.
 	 <link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
-	<div style="position:fixed; top:0; right:0;">
-<ul id="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="#">Camera Equpment</a></li>
-<li><a href="#">Contact Me</a></li>
-</ul>
-</div>
+	
+	<div id="logo">
+      <a href="index.html">
+        <img src="Images/logo.png">
+        <span>Crowley Under Water</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <a href="predivecheck.html">Pre-Dive Check</a>
+	  <a href="#">Camera Equipment</a>
+    </div>
       
       <h1>Diving in Guam</h1>
       
 		
    
-         <footer>
-      Crowley Under Water &copy; 2021 English (US) <span> <a href="#">About</a> <a href="#">Dive Gear</a>
-          <a href="#">Camera Equipment</a> <a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
-   </footer>
+    <div id="footer">
+      <span> Crowley Under Water &copy; 2021 <a href="#">About</a><a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
+   </div>
     </body>
   </html>
 
