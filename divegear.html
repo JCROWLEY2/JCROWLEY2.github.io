@@ -33,6 +33,58 @@ Description: This will be the foundation for my divegear page with a table of wh
 	  <a href="userdesignedpage.html">Dive Calculator</a>
 	</div>
    
+   <div class="container">
+  <section><h1>Week 5 Response</h1></section>
+
+<section>
+
+<form name="upscalc">
+<table border="1" bgcolor="#FBFBEF" cellpadding="2" cellspacing="0">
+<tbody>
+		<tr>
+		<td colspan="4" align="center"><b>AC Power (Mains) Line Voltage</b></td>
+		</tr>
+		<tr>
+		<td colspan="2">System Voltage Requirement</td>
+		<td colspan="2"><input type="text" name="v" size="8" value="120"> volts (all devices)</td>
+		</tr>
+		<tr>
+		<td colspan="4" align="center"><b>Power Load Values of Required Critical Components</b></td>
+		</tr>
+		<tr>
+		<td colspan="2" align="center">Device</td>
+		<td colspan="2" align="center">Load in Watts</td>
+		</tr>
+		<tr>
+		<td colspan="2">Monitor</td>
+		<td align="center"><input type="text" name="monitor" size="8" value="0" onfocus="clear_field(this)"> amps</td>
+		</tr>
+		<tr>
+		<td colspan="2">CPU</td>
+		<td align="center"><input type="text" name="cpu" size="8" value="0" onfocus="clear_field(this)"> amps</td>
+		</tr>
+		<tr>
+		<td colspan="2">Printer</td>
+		<td align="center"><input type="text" name="printer" size="8" value="0" onfocus="clear_field(this)"> amps</td>
+		</tr>
+		<tr>
+		<td colspan="4" align="center"><input type="button" value="Calculate Results" onclick="calcWatts(upscalc)"> <input type="Reset" value="Clear Values" ></td>
+		</tr>
+		<tr>
+		<td colspan="4" align="center"><b>Calculated Results</b></td>
+		</tr>
+		<tr>
+		<td colspan="2">Minimum UPS Capability</td>
+		<td align="center"><input type="text" name="minsize" size="8" readonly="readonly"> Watts</td>
+		</tr>
+</tbody>
+</table>
+</form>
+</section>
+   
+   
+   
+   
     <div id="footer">
       <span> Crowley Under Water &copy; 2021 <a href="#">About</a><a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
 	</div> 
