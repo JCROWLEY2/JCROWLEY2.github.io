@@ -267,3 +267,11 @@ a:active {
   font-family: 'Playfair Display', serif;
   margin-left: .2em;
 }
+
+/*Adjusting for New Forms and Tables being added */
+section {
+  /* position is static by default */
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
