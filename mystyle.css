@@ -275,3 +275,10 @@ section {
   align-items: center;
   justify-content: center
 }
+
+table {
+border: 1;
+bgcolor: #FBFBEF;
+cellpadding:"2" 
+cellspacing="0"
+}
