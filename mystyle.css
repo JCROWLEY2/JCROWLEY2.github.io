@@ -84,7 +84,7 @@ h2 {
 }
 
 /* Adding borders to my photos */
-img {
+#img {
 border: 5px solid #8F8F8F;
 }
 
