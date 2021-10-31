@@ -85,7 +85,7 @@ h2 {
 
 /* Adding borders to my photos */
 img {
-border: 5px solid #8F8F8F !important;
+border: 5px solid #8F8F8F;
 }
 
 /* Thank you to CSS-Tricks for the CSS code to make
