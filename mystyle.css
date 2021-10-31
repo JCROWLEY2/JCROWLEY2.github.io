@@ -113,7 +113,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  */
 }
 
 .topnav a {
-  float: center;
+  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
