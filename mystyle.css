@@ -172,7 +172,7 @@ learnlayout.com (https://learnlayout.com/css/style.css)
 #logo a {
   text-decoration: none;
   color: #414142;
-  position: relative;
+  position: left;
 }
 
 #logo a:active {
