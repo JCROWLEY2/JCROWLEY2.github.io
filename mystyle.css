@@ -157,25 +157,6 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  */
   }
 }
 
-/* Link formatting thanks to W3 schools again */
-a:link {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
 /* Everything from this point down was taken from this CSS sheet from 
 learnlayout.com (https://learnlayout.com/css/style.css) 
 */
