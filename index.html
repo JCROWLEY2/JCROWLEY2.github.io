@@ -31,13 +31,33 @@ embeded video and all other requirements for week 4, hopefully..
 	  </a>
 	</div>
 
-	<div id="menu">
-      <a href="index.html">Home</a>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+	  <a href="index.html" class="active">Home</a>
       <a href="photos.html">Photos</a>
       <a href="predivecheck.html">Pre-Dive Check</a>
 	  <a href="cameraequipment.html">Camera Equipment</a>
 	  <a href="divegear.html">Dive Equipment</a>
 	  <a href="userdesignedpage.html">Dive Calculator</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+	<div id="menu">
+      
 	</div>
  
 <!-- All of this code was provided by W3 Schools for building a portfolio style layout
