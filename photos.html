@@ -24,15 +24,31 @@ Description: This will be the foundation for my photo page with just a random as
 	  </a>
 	</div>
 
-	<div id="menu">
-      <a href="index.html">Home</a>
+<!-- All of this code was provided by W3 Schools for building a responsive menu like I originally wanted
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<div class="topnav" id="myTopnav">
+	  <a href="index.html" class="active">Home</a>
       <a href="photos.html">Photos</a>
       <a href="predivecheck.html">Pre-Dive Check</a>
 	  <a href="cameraequipment.html">Camera Equipment</a>
 	  <a href="divegear.html">Dive Equipment</a>
 	  <a href="userdesignedpage.html">Dive Calculator</a>
-	</div>
- 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
 <!-- All of this code was provided by W3 Schools for building a portfolio style layout
 https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp -->
  
