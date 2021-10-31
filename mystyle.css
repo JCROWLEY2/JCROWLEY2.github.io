@@ -182,7 +182,7 @@ a:active {
     position: absolute;
     top: -16px;
     left: -20px;
-    width: 250px;
+    width: 350px;
     padding-top: 2em;
     -webkit-transform-origin: 0 0;
        -moz-transform-origin: 0 0;
@@ -201,7 +201,7 @@ a:active {
     top: -16px;
     left: auto;
     right: -20px;
-    width: 250px;
+    width: 350px;
     padding-top: 2em;
     -webkit-transform-origin: 0 0;
        -moz-transform-origin: 0 0;
