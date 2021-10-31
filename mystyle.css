@@ -277,8 +277,8 @@ section {
 }
 
 table {
-border: 1;
-bgcolor: #FBFBEF;
-cellpadding:"2" 
-cellspacing="0"
+  border: 1;
+  bgcolor: #FBFBEF;
+  cellpadding: 2; 
+  cellspacing: 0;
 }
