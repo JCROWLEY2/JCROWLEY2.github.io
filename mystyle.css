@@ -104,6 +104,59 @@ the youtube video responsive https://css-tricks.com/fluid-width-video/ */
   height: 100%;
 }
 
+/* Thank you to W3 Schools again for the great resources
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery */
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
 /* All of this code was provided by W3 Schools for building a responsive menu like I originally wanted
 https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  */
 .topnav {
