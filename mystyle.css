@@ -319,5 +319,90 @@ table {
          url('museo300-regular-webfont.svg#museo300') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+/* Used by https://www.divestock.com/calc/css/global_mm.css where form was built from */
+table {
+	margin:0 auto;
+	max-width: 81%;
+}
+
+td {
+	width: 415px;
+}
+
+.calculator {
+	background: #0196e5;
+	border-radius: 8px 8px 0 0;
+	height: 40px;
+	width: 100%;
+}
+
+.calculator h1 {
+	color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding: 6px;
+	text-align:center;
+	width: 100%;
+}
+
+.calcu_inn{
+	background:#f6f6f7;
+	padding-left: 0;
+	margin: 0px 0px 15px 0px;
+}
+
+.calcu-subtitle {
+    text-align: center;
+    display: block;
+    background: #ddd;
+    margin: 0;
+    border-bottom: 1px solid #d1d1d1;
+    box-shadow: 0px 1px 3px #ccc;
+}
+
+.calcu_inn label, .calcu_inn b{
+	color:#3556a2;
+	padding-left: 10px;
+} 
+
+.calcu_inn table {
+	border: 0px;
+	width: 100%;
+}
+
+.calcu_inn table td {
+	width: 190px;
+}
+
+.calcu_inn table tr {
+	border: 5px;
+}
+
+.f-submit-wrap {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+small {
+	text-align:center;
+}
+
+strong {
+	font-size: 16px;
+}
+
+p {
+	margin: 0px 0px 10px 10px ;
+}
+.iframe_new iframe{ float:left; border:0}
+
+@media only screen and (max-width: 480px) {
+.calculator {
+    height: auto;
+}
+.calculator h1 {
+    margin: 0;
+}
 }
