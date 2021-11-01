@@ -44,6 +44,13 @@ h2 {
   margin: 8px -16px;
 }
 
+/* Containers */
+.containers {
+  background-color: white;
+  padding: 10px;
+}
+
+
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
