@@ -71,6 +71,7 @@ p {
 .column {
   float: left;
   width: 25%;
+  word-break: break-all;
 }
 
 /* Clear floats after rows */
@@ -84,12 +85,14 @@ p {
 .content {
   background-color: white;
   padding: 10px;
+  word-break: break-all;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
+	word-break: break-all;
   }
 }
 
@@ -97,6 +100,7 @@ p {
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
+	word-break: break-all;
   }
 }
 
@@ -129,6 +133,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery */
   float: left;
   width: 25%;
   padding: 10px;
+  word-break: break-all;
 }
 
 /* Style the images inside the grid */
@@ -159,7 +164,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery */
   position: absolute;
   bottom: 15px;
   left: 15px;
-  color: white;
+  color: #ff0000;
   font-size: 20px;
 }
 
