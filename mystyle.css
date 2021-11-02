@@ -41,6 +41,9 @@ h2 {
   text-align: center;
 }
 
+p {
+	word-break: break-all;
+}
 .row {
   margin: 8px -16px;
 }
