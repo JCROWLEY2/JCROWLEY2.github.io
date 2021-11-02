@@ -164,8 +164,11 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tab_img_gallery */
   position: absolute;
   bottom: 15px;
   left: 15px;
-  color: #ff0000;
+  color: #00000;
   font-size: 20px;
+  	-webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: black;
+	background-color: white; 
 }
 
 /* Closable button inside the expanded image */
