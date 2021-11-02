@@ -1,117 +1,140 @@
 <!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
 	
-      <!-- # JCROWLEY2.github.io
+<!-- # JCROWLEY2.github.io
 Diving Project Website for SCKANS CSCI434
-
 Student: Joshua Crowley
-Last Updated: 21 Oct
+Last Updated: 24 Oct
 Description: This will be a website in which is built per the instructions of the textbook and the Course. I plan to build upon the idea centered around Scuba Diving and my love for it. I would like to add a photo gallery that has a ton of great photos that my wife and I have taken as we dive around Guam. I would like to add a scrolling slide show at the main page of my website, then have a separate link at the top or interactive menu with different options as we progress through the course.
-
-Changes 11 Oct 21: Added some style and fixed HTML tag at the top. In line with the exercise 7.3, I attempted to change how my viewport works for images. No impact to layout in code. I would like to change the images to use a JS script in the coming weeks.
-
-Changes 21 Oct 21: Moved the CSS to a seperate file. I failed at starting
+24 Oct 21: TONS of changes have occurred. Image responsiveness was changed to better
+suite the layout and loading for the page. I really like the sytle and flow of the website
+thus far. See notes and comments on other pages. Previous code will be kept just in case
+something needs to be reverted.
+21 Oct 21: Moved the CSS to a seperate file. I failed at starting
 a new page, but got it figured out for a really basic page that has
 embeded video and all other requirements for week 4, hopefully..
+11 Oct 21: Added some style and fixed HTML tag at the top. In line with the exercise 7.3, I attempted to change how my viewport works for images. No impact to layout in code. I would like to change the images to use a JS script in the coming weeks.
 -->
 	  
-	  <meta charset="utf-8">
-      <title>Crowley Under Water</title>
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="mystyle.css">
+	<meta charset="utf-8">
+		<title>Crowley Under Water</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="w3-schools-font-awesome.min.css">
+		<link rel="stylesheet" href="w3-schools.css">
+		<link rel="stylesheet" href="mystyle.css">
     </head>
-    <body>
-	<div style="position:fixed; top:0; right:0;">
-<ul id="menu">
-<li><a href="predivecheck.html">Pre-Dive Check</a></li>
-<li><a href="#">Camera Equpment</a></li>
-</ul>
+	
+<body>
+	<div id="logo">
+      <a href="index.html">
+        <img src="Images/Logo.png" alt="Crowley Under Water Logo" style="width:100%;height:100%">
+        <span>Crowley Under Water</span>
+	  </a>
+	</div>
+
+<!-- All of this code was provided by W3 Schools for building a responsive menu like I originally wanted
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<div class="topnav" id="myTopnav">
+	  <a href="index.html" class="active">Home</a>
+      <a href="photos.html">Photos</a>
+      <a href="predivecheck.html">Pre-Dive Check</a>
+	  <a href="cameraequipment.html">Camera Equipment</a>
+	  <a href="divegear.html">Dive Equipment</a>
+	  <a href="userdesignedpage.html">Dive Calculator</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
-      
-      <h1>Diving in Guam</h1>
-      
-    <p>This is a Marble Ray
-	<picture>
-	<!--Attempting to change the format of responsive images on 11 Oct 21, no changes -->
-	<source media="(min-width: 480px)"
-	srcset="Images/Marble-Ray-400.jpg 400w,
-			Images/Marble-Ray-800.jpg 800w,
-			Images/Marble-Ray-1200.jpg 1200w,
-			Images/Marble-Ray-2048.jpg 2048w sizes="80vw">
-	<img src="Images/Marble-Ray-400.jpg" alt="Largest and first Marble Ray I have seen upclose">
-			<br>This was captured at the dive site Barracuda Rock in Guam.</p>
-     
-    <h2>The Beginning</h2>
-     
-    <p>
-	<img src="Images/Me-400.jpg" alt="My Wife and I doing underwater navigation"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Me-400.jpg 400w,
-			Images/Me-800.jpg 800w,
-			Images/Me-1200.jpg 1200w,
-			Images/Me-2048.jpg 2048w">
-			<br>After moving to Guam in 2016, I would constantly drive past the sign for the Padi Open Water Course at <a href="https://www.mdaguam.com/">MDA</a> for $200. This went on for close to 3 years before I finally took the dive, literally. I had some of the best instructors and friends from <a href="https://www.facebook.com/cnc.divers.page/">CnC Divers</a> that made the whole experience a dream. They related everything in the course to be very relaxed and memorable. It wasn't long before not only was I diving on Christmas that year, but I was ready to see and do more under water. After approximately 20 dives with friends and co-workers, I found how to take my hobby to the next level. I am by no means a photographer on land, so this was going to put me at a disadvantage trying to learn the <a href="https://www.bhphotovideo.com/explora/photography/tips-and-solutions/the-exposure-triangle">Photography Triangle.</a> This essentially lead to my next addiction, I mean hobby.</p>	
-			
-	<h2>Next Steps</h2>
-	<p>	 
-	<img src="Images/First-Camera-400.jpg" alt="Wife taking a picture of me taking a picture"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/First-Camera-400.jpg 400w,
-			Images/First-Camera-800.jpg 800w,
-			Images/First-Camera-1200.jpg 1200w,
-			Images/First-Camera-2048.jpg 2048w">
-			<br>I was diving with my buddies early on and they were taking photographs underwater with a small camera of all the fish and small creatures we were seeing. It wasn't long before I became obsessed with wanted to share what I am seeing underwater with all my friends and family. This is where my first camera setup was purchased (<a href="#">Camera Equipment</a>). I wanted to be the Pokémon&trade; trainer of underwater photography and catch them all! </p>
-	 
-	<p>
-	<img src="Images/Lion-Fish-400.jpg" alt="My best Lion Fish shot"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Lion-Fish-400.jpg 400w,
-			Images/Lion-Fish-800.jpg 800w,
-			Images/Lion-Fish-1200.jpg 1200w,
-			Images/Lion-Fish-2048.jpg 2048w">
-			This is a juvenile Lion Fish. They are common to see around Guam's waters.</p>
-			
-	<p>
-	<img src="Images/Shark-400.jpg" alt="The curious Black Tip Reef Shark"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Shark-400.jpg 400w,
-			Images/Shark-800.jpg 800w,
-			Images/Shark-1200.jpg 1200w,
-			Images/Shark-2048.jpg 2048w">
-			This is the closest a Black Tip Reef Shark had gotten to me. They are semi-common to see around Guam's waters. This one swam close to use as we were being carried out of the harbor area into the open ocean from current.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<!-- All of this code was provided by W3 Schools for building a portfolio style layout
+https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp -->
+ 
+<div class="content">
+	 <h2>Where it Began 105ft Down</h2>
+  <img src="Images/Start-800.jpg" alt="Wife and I touching 2 Shipwrecks" style="width:100%;height:100%">
+   <p>After moving to Guam in 2016, I would constantly drive past the sign for the Padi Open Water Course at <a href="https://www.mdaguam.com/">MDA</a> for $200. This went on for close to 3 years before I finally took the dive, literally. It wasn't long before not only was I diving on Christmas that year, but I was ready to see and do more under water. After approximately 20 dives with friends and co-workers, I found how to take my hobby to the next level. I am by no means a photographer on land, so this was going to put me at a disadvantage trying to learn the <a href="https://www.bhphotovideo.com/explora/photography/tips-and-solutions/the-exposure-triangle">Photography Triangle.</a> This essentially lead to my next addiction, I mean hobby.</p>
+</div>
 	
-	<p>
-	<img src="Images/Wife-400.jpg" alt="My Wife and her addiction, I mean hobby"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Wife-400.jpg 400w,
-			Images/Wife-800.jpg 800w,
-			Images/Wife-1200.jpg 1200w,
-			Images/Wife-2048.jpg 2048w">
-			This is my wife and her getting a picture of me taking a picture. There is a line below to my current camera setup and the website in which had an amazing COVID sale that made this possible.</p>
-			
-	<p>
-	<img src="Images/Nemo-400.jpg" alt="One of many photos of these fish"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Nemo-400.jpg 400w,
-			Images/Nemo-800.jpg 800w,
-			Images/Nemo-1200.jpg 1200w,
-			Images/Nemo-2048.jpg 2048w">
-			This is one of many anemone fish. They are usually found in deeper depths as often times it takes many years for the anemone to form. These fish are cute and funny because they come out and challenge you like they are protecting their turf.</p>
-	
-	<p>
-	<img src="Images/Shrimp-400.jpg" alt="Shrimp visible on a night dive"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/Shrimp-400.jpg 400w,
-			Images/Shrimp-800.jpg 800w,
-			Images/Shrimp-1200.jpg 1200w,
-			Images/Shrimp-2048.jpg 2048w">
-			This is a type of shrimp commonly found at night around coral. I have many pictures of these guys as the only way to see them was with your flash light and they don't move much when taking pictures of them.</p>			
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="Images/Marble-Ray-800.jpg" alt="Largest and first Marble Ray I have seen upclose" style="width:100%;height:100%">
+      <h3>Marble Ray</h3>
+      <p>This was captured at the dive site Barracuda Rock in Guam.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="Images/Me-800.jpg" alt="My Wife and I doing underwater navigation" style="width:100%;height:100%">
+      <h3>Advancing our Skills</h3>
+      <p>I had some of the best instructors and friends from <a href="https://www.facebook.com/cnc.divers.page/">CnC Divers</a> that made the whole experience a dream. They related everything in the course to be very relaxed and memorable.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="Images/First-Camera-800.jpg" alt="Wife taking a picture of me taking a picture" style="width:100%;height:100%">
+      <h3>My Camera Setup</h3>
+      <p>I was diving with my buddies early on and they were taking photographs underwater with a small camera of all the fish and small creatures we were seeing. It wasn't long before I became obsessed with wanted to share what I am seeing underwater with all my friends and family. This is where my first camera setup was purchased (<a href="cameraequipment.html">Camera Equipment</a>). I wanted to be the Pokémon&trade; trainer of underwater photography and catch them all!</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="Images/Wife-800.jpg" alt="My Wife and her addiction, I mean hobby" style="width:100%;height:100%">
+      <h3>My Wife</h3>
+      <p>This is my wife and her getting a picture of me taking a picture. There is a line below to my current camera setup and the website in which had an amazing COVID sale that made this possible.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="Images/Lion-Fish-800.jpg" alt="My best Lion Fish shot" style="width:100%;height:100%">
+      <h3>Juvenile Lion FIsh</h3>
+      <p>This is a juvenile Lion Fish. They are common to see around Guam's waters.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+     <img src="Images/Shark-800.jpg" alt="The curious Black Tip Reef Shark" style="width:100%;height:100%">
+      <h3>Curious George</h3>
+      <p>This is the closest a Black Tip Reef Shark had gotten to me. They are semi-common to see around Guam's waters. This one swam close to use as we were being carried out of the harbor area into the open ocean from current.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="Images/Nemo-800.jpg" alt="One of many photos of these fish" style="width:100%;height:100%">
+      <h3>Marlen and Son</h3>
+      <p>This is one of many anemone fish. They are usually found in deeper depths as often times it takes many years for the anemone to form. These fish are cute and funny because they come out and challenge you like they are protecting their turf.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="Images/Shrimp-800.jpg" alt="Shrimp visible on a night dive" style="width:100%;height:100%">
+      <h3>Night Dive Find</h3>
+      <p>This is a type of shrimp commonly found at night around coral. I have many pictures of these guys as the only way to see them was with your flash light and they don't move much when taking pictures of them.</p>
+    </div>
+  </div>
+</div>
    
-         <footer>
-      Crowley Under Water &copy; 2021 English (US) <span> <a href="#">About</a> <a href="diveGear.html">Dive Gear</a>
-          <a href="#">Camera Equipment</a> <a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
-   </footer>
-    </body>
-  </html>
+    <div id="footer">
+      <span> Crowley Under Water &copy; 2021 <a href="#">About</a><a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
+	</div> 
+   
+  </body>
+</html>
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+	
+<!-- # JCROWLEY2.github.io
+Diving Project Website for SCKANS CSCI434
+Student: Joshua Crowley
+Page: /divegear.html
+Last Updated: 31 Oct
+Description: This will be the foundation for my divegear page with a table of what type of gear and the links to them, hopefully..
+-->
+	  
+	<meta charset="utf-8">
+		<title>Crowley Under Water</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="w3-schools-font-awesome.min.css">
+		<link rel="stylesheet" href="w3-schools.css">
+		<link rel="stylesheet" href="mystyle.css">
+    </head>
+	
+<body>
+	<div id="logo">
+      <a href="index.html">
+        <img src="Images/Logo.png" alt="Crowley Under Water Logo" style="width:100%;height:100%">
+        <span>Crowley Under Water</span>
+	  </a>
+	</div>
+
+<!-- All of this code was provided by W3 Schools for building a responsive menu like I originally wanted
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<div class="topnav" id="myTopnav">
+	  <a href="index.html" class="active">Home</a>
+      <a href="photos.html">Photos</a>
+      <a href="predivecheck.html">Pre-Dive Check</a>
+	  <a href="cameraequipment.html">Camera Equipment</a>
+	  <a href="divegear.html">Dive Equipment</a>
+	  <a href="userdesignedpage.html">Dive Calculator</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+ 
+<div class="container">
+  <section>
+   <h2>Scuba Diving Gear $2,823.84</h2>
+  </section>
+</div>
+   
+<div class="w3-container">
+	<div class="w3-responsive">
+		<table class="w3-table-all">
+			<tr>
+			  <th>Item</th>
+			  <th>Link</th>
+			  <th>Price</th>
+			</tr>
+			<tr>
+			  <td>Buoyancy Compensator Device (BCD)</td>
+			  <td><a href="https://us.apeksdiving.com/en/dive/bcds/apeks-black-ice-BC133.html">Apeks Black Ice</a></td>
+			  <td>$749.00</td>
+			</tr>
+			<tr>
+			  <td>Regulator</td>
+			  <td><a href="https://us.apeksdiving.com/en/dive/regulators/xl4%2B-RG124.html">XL4+ Regulator White (Yoke) </a></td>
+			  <td>$589.00</td>
+			</tr>
+			<tr>
+			  <td>Dive Computer</td>
+			  <td><a href="https://www.oceanicworldwide.com/product/computers/proplus-4/?v=7516fd43adaa">ProPlus 4.0</a></td>
+			  <td>$829.95</td>
+			</tr>
+			<tr>
+			  <td>Fins</td>
+			  <td><a href="https://us.apeksdiving.com/en/dive/fins/rk3-hd-fins-FA247A.html">Apeks RK3 HD</a></td>
+			  <td>$171.00</td>
+			</tr>
+			<tr>
+			  <td>Mask</td>
+			  <td><a href="https://www.xsscuba.com/masks/seadive-seadiver-rayblocker-hd">XSScuba Seadive Seadiver</a></td>
+			  <td>$99.99</td>
+			</tr>
+			<tr>
+			  <td>Primary Dive Light</td>
+			  <td><a href="https://tovatec.com/collections/lights/products/tovatec-3500-lumen-spot-light">Tovatec 3500 Lumen Spot Light</a></td>
+			  <td>$274.95</td>
+			</tr>
+			<tr>
+			  <td>Backup Dive Light</td>
+			  <td><a href="https://tovatec.com/collections/lights/products/t1000-spot-light-t1000s">Tovatec T1000 Spot Light</a></td>
+			  <td>$109.95</td>
+			</tr>
+		</table>
+	</div>   
+</div>  
+   
+    <div id="footer">
+      <span> Crowley Under Water &copy; 2021 <a href="#">About</a><a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
+	</div> 
+   
+  </body>
+</html>
+

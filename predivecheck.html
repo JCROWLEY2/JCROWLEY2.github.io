@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
 	
       <!-- # JCROWLEY2.github.io
 Diving Project Website for SCKANS CSCI434
 
 Student: Joshua Crowley
-Last Updated: 21 Oct
-Description: This is an additional page as required by week 4's assignments.
-It is very basic in layout and content. Once an actual theme is chosen, the sytles
-and content will be corrected. 
+Last Updated: 24 Oct
+Description: 
+
+24 Oct 21: I have gotten a good layout that I like
+based on the home page. I would like a way to add
+the header/menu/footer to every page without having to copy and paste it every time since minor changes will require
+updates on every single page HTML file.
+
+21 Oct 21: This is an additional page as required by week 4's assignments. It is very basic in layout and content. Once an actual theme is chosen, the sytles and content will be corrected. 
 -->
 	  
 	  <meta charset="utf-8">
       <title>Crowley Under Water</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="mystyle.css">
+		<link rel="stylesheet" href="w3-schools-font-awesome.min.css">
+		<link rel="stylesheet" href="w3-schools.css">
+		<link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
-	<div style="position:fixed; top:0; right:0;">
-<ul id="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="#">Camera Equpment</a></li>
 
-</ul>
+	<div id="logo">
+      <a href="index.html">
+        <img src="Images/Logo.png" alt="Crowley Under Water Logo" style="width:100%;height:100%">
+        <span>Crowley Under Water</span>
+      </a>
+    </div>
+
+<!-- All of this code was provided by W3 Schools for building a responsive menu like I originally wanted
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<div class="topnav" id="myTopnav">
+	  <a href="index.html" class="active">Home</a>
+      <a href="photos.html">Photos</a>
+      <a href="predivecheck.html">Pre-Dive Check</a>
+	  <a href="cameraequipment.html">Camera Equipment</a>
+	  <a href="divegear.html">Dive Equipment</a>
+	  <a href="userdesignedpage.html">Dive Calculator</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
-      
-      <h1>How to Safely do a Pre-Dive Check</h1>
-      <h2>Video</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9Y_paGW6YE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>
 
-			<br>A pre dive safety check is an important accident prevention procedure new divers learn during training. Unfortunately, it's one of the first things certified divers (choose to) forget. As divers gain more experience, the buddy check is often reduced to one diver asking the other, "you good?" One of the sayings from class was "Big White Rabbits Are Fuzzy." Can you identify the B-W-R-A-F in the above video? </p>
-			<img src="Images/PreDivePhoto-400.jpg" alt="Making Safety Checks Fun"
-		sizes="(min=width: 400px) 50vw, 100vw"
-		srcset="Images/PreDivePhoto-400.jpg 400w,
-			Images/PreDivePhoto-800.jpg 800w,
-			Images/PreDivePhoto-1100.jpg 100w>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<div class="content">
+	 <h2>How to Safely do a Pre-Dive Check</h2>
+  <img src="Images/PreDivePhoto-800.jpg" alt="Making Safety Checks Fun" style="width:100%;height:100%">
+   <p>A pre dive safety check is an important accident prevention procedure new divers learn during training. Unfortunately, it's one of the first things certified divers (choose to) forget. As divers gain more experience, the buddy check is often reduced to one diver asking the other, "you good?" One of the sayings from class was "Big White Rabbits Are Fuzzy." Can you identify the B-W-R-A-F in the below video?<br>
+  </p><div class="videoWrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/9Y_paGW6YE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+   <div id="footer">
+      <span> Crowley Under Water &copy; 2021 <a href="#">About</a><a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
+   </div>   
    
-         <footer>
-      Crowley Under Water &copy; 2021 English (US) <span> <a href="#">About</a> <a href="diveGear.html">Dive Gear</a>
-          <a href="#">Camera Equipment</a> <a href="mailto: jcrowley2@gmail.com">Contact Me</a> </span>
-   </footer>
     </body>
   </html>
 
