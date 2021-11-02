@@ -9,15 +9,12 @@ Page: /userdesignedpage.html
 Last Updated: 31 Oct
 Description: I have yet decided what type of page this will be. I really enjoy the tables so this might be some type of calculation page for bottom times like a dive planner.
 -->
-	  
-	
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-	<meta charset="utf-8">
+<meta charset="utf-8">
 		<title>Crowley Under Water</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="w3-schools-font-awesome.min.css">
 		<link rel="stylesheet" href="w3-schools.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="mystyle.css">
     </head>
 	
@@ -54,9 +51,107 @@ function myFunction() {
 }
 </script>
 
-<!-- This was originally found here https://www.divestock.com/calculators which then led me to this page https://www.divestock.com/calc/mod/index.php -->
-<div class="formcontainer">
-	<p><iframe class="responsive-iframe_form" height="400" src="https://www.divestock.com/calc/mod/index.php" width="445"></iframe> </p>
+<script language="JavaScript">
+<!--
+// CED subroutine for cleaning up JavaScript rounding errors 
+// to any reasonable number of decimal places 5/5/1997 last mod 2/19/2004
+// round for decimal of (value of precision) places, default is 3
+// This routine can be used to pass a number and a number for precision
+// or just a number only, that is to be rounded to a set number of decimal
+// places. This routine supports leading and training zeros, leading and
+// trailing spaces, and padding. To prevent errors, pass variables as a string.
+-->
+function perRound(num, precision) {
+	var precision = 2;
+	precision = parseInt(precision); 
+    var result1 = num * Math.pow(10, precision);
+    var result2 = Math.round(result1);
+    var result3 = result2 / Math.pow(10, precision);
+    return zerosPad(result3, precision);
+}
+
+function zerosPad(rndVal, decPlaces) {
+    var valStrg = rndVal.toString(); // Convert the number to a string
+    var decLoc = valStrg.indexOf("."); // Locate the decimal point
+    // check for a decimal 
+    if (decLoc == -1) {
+        decPartLen = 0; // If no decimal, then all decimal places will be padded with 0s
+        // If decPlaces is greater than zero, add a decimal point
+        valStrg += decPlaces > 0 ? "." : "";
+    }
+    else {
+        decPartLen = valStrg.length - decLoc - 1; // If there is a decimal already, only the needed decimal places will be padded with 0s
+    }
+     var totalPad = decPlaces - decPartLen;    // Calculate the number of decimal places that need to be padded with 0s
+    if (totalPad > 0) {
+        // Pad the string with 0s
+        for (var cntrVal = 1; cntrVal <= totalPad; cntrVal++) 
+            valStrg += 0;
+        }
+    return valStrg;
+}
+// send the value in as "num" in a variable
+
+// clears field of default value
+function clear_field(field) {
+		if (field.value==field.defaultValue) {
+			field.value=''
+		}
+	}
+	
+function modcalc(form) {
+		var airpercent=parseFloat(modcalcform.airpercent.value);
+		var atapressure=parseFloat(modcalcform.atapressure.value);
+
+		modcalcform.modresult.value=Math.round(((atapressure/airpercent)-1)*33);
+	}
+	
+</script>
+
+
+<div class="container">
+  <section>
+   <h2><b><span>Calculating Max Operating Depth</span></b></h2><br>
+  </section>
+  <section>
+   <span><p>This calculator is great for calcuating your max operating depth. Standard oxygen mixture is 21% or .21. Anything above that is considered a special blend called Nitrox which requires specialized training and calibration and tanks to fill it up. Often times, most scuba diving gear is rated for both Oxygen and Nitrox blends up to a certain percentage.</p></span>
+  </section>
+  <section>
+
+	<form name="modcalcform">
+		<table border="1" bgcolor="#FBFBEF" cellpadding="2" cellspacing="0">
+		<tbody>
+			<tr>
+				<td colspan="2">Oxygen Mixture in Tank</td>
+				<td colspan="2"><input type="text" name="airpercent" size="8" value=".21" onfocus="clear_field(this)"> Oxygen</td>
+			</tr>
+			<tr>
+				<td colspan="2">Atomospheres Absolute</td>
+				<td colspan="2"><input type="text" name="atapressure" size="8" value="1.4" onfocus="clear_field(this)"> ATA</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center"><input type="button" value="Calculate Results" onclick="modcalc(modcalcform)"> <input type="Reset" value="Clear Values" ></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center"><b>Calculated Results</b></td>
+			</tr>
+			<tr>
+				<td colspan="2">Maximum Operating Depth</td>
+				<td align="center"><input type="text" name="modresult" size="8" readonly="readonly"> Feet</td>
+			</tr>
+		</tbody>
+		</table>
+	</form>
+  </section>
+  <section>
+  
+  <figure>
+    <blockquote cite="https://www.globosurfer.com/maximum-operating-depth/">
+        <span><p><b>Importance of Calculating Maximum Operating Depth</b><br>Despite oxygen being an all-important gas for us human beings, breathing in extremely high concentrations of it can be rather fatal for divers. This is because doing so will result in oxygen toxicity. There are two types of oxygen toxicity: Pulmonary oxygen toxicity and central nervous system (CNS) toxicity.<br><br>Pulmonary oxygen toxicity is caused by exposure to elevated partial pressures of oxygen for long periods of time resulting in a burning sensation in the trachea, coughing, shortness of breath, and eventually lung failure. On the other hand, CNS toxicity is caused by exposure to oxygen partial pressures greater than 1.6 ATA and can result in convulsions, pulmonary barotrauma, or even death. In any case, you'll want to make sure that you don't expose yourself to any of these types of oxygen toxicity.<br><br>This is why calculating your maximum operating depth is important. By making sure that you know and stay within that depth helps to ensure that you don't go to depths where the oxygen in your tank becomes toxic and fatal. One of the best ways to do so is with a dive computer which can be programmed to beep or otherwise notify you if you exceed your MOD limits.</p></span>
+    </blockquote>
+    <figcaption>-David Hamburg, <cite>Globo Surfer</cite></figcaption>
+</figure>
+  </section>
 </div>
 	
 
