@@ -41,6 +41,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+	word-break: break-all;
+	text-align: center;
+}
+
 p {
 	word-break: break-all;
 }
